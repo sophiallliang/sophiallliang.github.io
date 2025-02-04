@@ -1,0 +1,169 @@
+body {
+  background-color: #1e1e1e;
+  color:white;
+  font-family: Nunito;
+  margin-left: 150px;
+  transition: margin-left 0.5s ease-in-out;
+}
+
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+button {
+  font-family: Nunito;
+  background-color: white;
+  margin-top: 6px;
+  font-weight:800;
+  border:none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  height:50px;
+  width:150px;
+  padding-top: 2px;
+  border-radius: 20px;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+ 
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+background-color: rgb(180, 180, 180);
+}
+
+.game-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 15px;
+  cursor: default;
+}
+
+
+.navBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 220px;
+  height: 100vh;
+  border: none;
+  background-color: rgb(62, 62, 62);
+
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+.navBar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+.navBar ul li {
+  padding: 7px;
+}
+
+.navBar ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  transition: color 0.1s, left 1.5s ease-in-out;
+}
+
+.navBar ul li a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.navBar ul li a:hover {
+  color: rgb(103, 164, 255);
+  position: relative;
+  left: 8px;
+}
+
+.navBar ul li a.active {
+  color:  rgb(103, 164, 255);
+  font-weight: 800;
+  cursor: default;
+  position: static;
+}
+
+
+.title-picture {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+
+ 
+@media (max-width: 1000px) {
+  .navBar {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+  body {
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+  .navBar ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+  .navBar ul li a {
+    font-size: 1.5rem;
+  }
+  .navBar ul li a svg {
+    width: 30px;
+    height: 30px;
+  }
+  .title-picture {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    height: 8vh;
+    width: auto;
+  }
+
+  .game-title {
+    display: none;
+  }
+
+}

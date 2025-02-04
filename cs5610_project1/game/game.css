@@ -1,0 +1,90 @@
+.boards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.timestamp {
+  text-align: center;
+  font-size: 30px;
+}
+.enemy-board, .player-board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  background-color: white;
+  width: fit-content;
+  padding: 10px;
+  column-gap: 10px;
+}
+
+.timer-container {
+  margin-top: 2vh;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(112, 217, 238);
+  border: 2px solid gray;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+
+.cell:hover {
+  cursor:pointer;
+  background-color: rgb(178, 237, 249);
+}
+.cell:active {
+  background-color: rgb(130, 223, 242);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hit {
+  background-color: rgb(142, 197, 142);
+  color: green;
+  font-size: 30px;
+}
+
+.hit:hover {
+  background-color: rgb(86, 179, 86);
+}
+.hit:active {
+  background-color: rgb(142, 197, 142);
+}
+
+
+.miss {
+  color: red;
+  font-size: 30px;
+  background-color: rgb(250, 169, 169);
+}
+
+.miss:hover {
+  background-color: rgb(241, 134, 134);
+}
+
+.miss:active {
+  background-color: rgb(250, 152, 152);
+}
+
+@media(max-width: 1000px) {
+  .container {
+    margin-bottom: 10vh;;
+  }
+  .boards-container {
+    zoom: 1.5;
+  }
+
+}
